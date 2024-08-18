@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { IoPropertiesComponent } from './io-properties/io-properties.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HomeComponent,
+    IoPropertiesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatButtonModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    provideAnimationsAsync('noop')
+  ],
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }

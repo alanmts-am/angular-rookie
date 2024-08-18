@@ -1,0 +1,68 @@
+<h1>Hello World</h1>
+
+<section class="data-binding">
+  <h1>Passagem de dados</h1>
+  <article class="interpolation">
+    <h1>Interpolação</h1>
+    <p>{{ texto }}</p>
+    <p>{{ getTexto() }}</p>
+  </article>
+  <article class="property-binding">
+    <h1>Passagem por propriedade</h1>
+    <p>Abaixo uma imagem gerada diretamente</p>
+    <img src="http://lorempixel.com.br/500/400/?2" alt="" />
+    <p>Já esta abaixo está sendo passada por property binding</p>
+    <img [src]="urlImage" alt="" />
+  </article>
+  <article class="class-style-binding">
+    <h1>Passagem por classe e estilo</h1>
+    <select #classe name="cor" id="cor" (change)="(0)">
+      <option value="verde">verde</option>
+      <option value="vermelho">vermelho</option>
+    </select>
+    <h1 [class]="classe.value">Esse texto irá ficar {{ classe.value }}</h1>
+  </article>
+  <article class="event-binding">
+    <h1>Passagem por evento</h1>
+    <button mat-flat-button (click)="botaoClicado()">
+      Clique para subir alerta
+    </button>
+    <input
+      type="text"
+      name=""
+      id=""
+      placeholder="Digite alguma coisa"
+      (keyup)="getValue($event)"
+      (keyup.enter)="setValue($event)"
+      (blur)="setValue($event)"
+    />
+    <p>{{ texto_digitado }}</p>
+    <p>Texto salvo: {{ texto_salvo }}</p>
+  </article>
+  <article class="two-ways-binding">
+    <h1>Passagem nas duas direções</h1>
+    <input type="text" [(ngModel)]="texto_armazenado" />
+    <p>Texto armazenado: {{ texto_armazenado }}</p>
+  </article>
+</section>
+
+<section class="directives">
+  <h1>Diretivas</h1>
+  <article class="ng-for">
+    <h2>NgFor</h2>
+    <h3>
+      Lista de pessoas geradas pela diretiva ngFor, vindas de uma classe
+      .service
+    </h3>
+    <ul>
+      <li *ngFor="let pessoa of pessoas">{{ pessoa }}</li>
+    </ul>
+  </article>
+</section>
+
+<section class="io-properties">
+  <h1>Passagem e recebimento de dados entre componentes</h1>
+  <app-io-properties [nome]="nomeIo" (mudouValor)="onMudouValor($event)">
+  </app-io-properties>
+  <p>Valor recebido do filho: {{ valorRecebido }}</p>
+</section>
