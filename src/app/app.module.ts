@@ -7,11 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { IoPropertiesComponent } from './io-properties/io-properties.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    IoPropertiesComponent
+    IoPropertiesComponent,
+    DirectivesComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
