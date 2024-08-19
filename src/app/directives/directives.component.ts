@@ -11,6 +11,7 @@ export class DirectivesComponent {
   isCursosListados = false;
 
   input = 0
+  isFavorite = false;
 
   constructor(private directivesService: DirectivesService) {
     this.pessoas = this.directivesService.getCursos();
@@ -22,6 +23,10 @@ export class DirectivesComponent {
 
   mudarInput() {
     this.input++
+  }
+
+  mudaImg() {
+    this.isFavorite = !this.isFavorite
   }
 
 }

@@ -1,8 +1,8 @@
 <article class="ng-for">
-  <h2>NgFor</h2>
-  <h3>
+  <h1>NgFor</h1>
+  <p>
     Lista de pessoas geradas pela diretiva ngFor, vindas de uma classe .service
-  </h3>
+  </p>
   <ul>
     <li *ngFor="let pessoa of pessoas; let i = index">
       {{ i + 1 }} - {{ pessoa }}
@@ -11,7 +11,7 @@
 </article>
 
 <article class="ng-if">
-  <h2>NgIf</h2>
+  <h1>NgIf</h1>
   <button mat-flat-button (click)="trocar()">Trocar valor</button>
   <p *ngIf="isCursosListados">
     A lista dos cursos está vazia. Esse texto apareceu por isso
@@ -19,7 +19,7 @@
 </article>
 
 <article class="ng-switch">
-  <h2>NgSwitch</h2>
+  <h1>NgSwitch</h1>
   <button mat-flat-button (click)="mudarInput()" [disabled]="input > 1">
     {{ input <= 1 ? "Trocar para o próx case" : "Botão bloqueado" }}
   </button>
@@ -30,4 +30,15 @@
       Esse aqui é o valor default. Seu botão foi desabilitado
     </p>
   </div>
+</article>
+
+<article class="ng-class">
+  <h1>ngClass</h1>
+  <p>{{ !isFavorite ? "Favorite o coração abaixo" : "!!!Parabéns!!!" }}</p>
+  <button (click)="mudaImg()">
+    <img
+      [ngClass]="{ unfavorite: !isFavorite, favorite: isFavorite }"
+      alt="asdasd"
+    />
+  </button>
 </article>

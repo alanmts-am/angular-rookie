@@ -2,3 +2,23 @@ li {
   list-style-type: none;
   padding-left: 0;
 }
+
+.ng-class button {
+  border: none;
+  background-color: transparent;
+}
+
+.ng-class img:hover {
+  // preto
+  content: url("https://img.icons8.com/?size=100&id=10287&format=png&color=000000");
+}
+
+.favorite {
+  // preto
+  content: url("https://img.icons8.com/?size=100&id=10287&format=png&color=000000");
+}
+
+.unfavorite {
+  // não preenchido
+  content: url("https://img.icons8.com/?size=100&id=581&format=png&color=000000");
+}
