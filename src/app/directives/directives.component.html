@@ -34,7 +34,9 @@
 
 <article class="ng-class">
   <h1>ngClass</h1>
-  <p>{{ !isFavorite ? "Favorite o coração abaixo" : "!!!Parabéns!!!" }}</p>
+  <p [ngStyle]="{ color: isFavorite ? 'blue' : 'red' }">
+    {{ !isFavorite ? "Favorite o coração abaixo" : "!!!Parabéns!!!" }}
+  </p>
   <button (click)="mudaImg()">
     <img
       [ngClass]="{ unfavorite: !isFavorite, favorite: isFavorite }"
