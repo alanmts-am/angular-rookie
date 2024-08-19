@@ -1,16 +1,16 @@
-<section [ngSwitch]="nav">
-  <h1 *ngSwitchCase="'home'">Hello World</h1>
-  <section class="data-binding" *ngSwitchCase="'data'">
+<section>
+  <h1>Hello World</h1>
+  <section class="data-binding">
     <h1>Passagem de dados</h1>
     <app-data-binding></app-data-binding>
   </section>
 
-  <section class="directives" *ngSwitchCase="'directives'">
+  <section class="directives">
     <h1>Diretivas</h1>
     <app-directives></app-directives>
   </section>
 
-  <section class="io-properties" *ngSwitchCase="'io'">
+  <section class="io-properties">
     <h1>Passagem e recebimento de dados entre componentes</h1>
     <app-io-properties [nome]="nomeIo" (mudouValor)="onMudouValor($event)">
     </app-io-properties>
