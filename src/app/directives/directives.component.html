@@ -4,7 +4,9 @@
     Lista de pessoas geradas pela diretiva ngFor, vindas de uma classe .service
   </h3>
   <ul>
-    <li *ngFor="let pessoa of pessoas">{{ pessoa }}</li>
+    <li *ngFor="let pessoa of pessoas; let i = index">
+      {{ i + 1 }} - {{ pessoa }}
+    </li>
   </ul>
 </article>
 
@@ -18,7 +20,14 @@
 
 <article class="ng-switch">
   <h2>NgSwitch</h2>
-  <button mat-flat-button (click)="mudarInput()">Trocar valor</button>
-  <input type="text" value="Desabilita quando verdade" [disabled]="input" />
-  <input type="text" value="Desabilita quando false" [disabled]="!input" />
+  <button mat-flat-button (click)="mudarInput()" [disabled]="input > 1">
+    {{ input <= 1 ? "Trocar para o próx case" : "Botão bloqueado" }}
+  </button>
+  <div [ngSwitch]="input">
+    <p *ngSwitchCase="0">Este parágrafo tem o case "0"</p>
+    <p *ngSwitchCase="1">Este parágrafo tem o case "1"</p>
+    <p *ngSwitchDefault>
+      Esse aqui é o valor default. Seu botão foi desabilitado
+    </p>
+  </div>
 </article>

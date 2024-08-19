@@ -10,7 +10,7 @@ export class DirectivesComponent {
   pessoas!: string[];
   isCursosListados = false;
 
-  input = true
+  input = 0
 
   constructor(private directivesService: DirectivesService) {
     this.pessoas = this.directivesService.getCursos();
@@ -21,7 +21,7 @@ export class DirectivesComponent {
   }
 
   mudarInput() {
-    this.input = !this.input
+    this.input++
   }
 
 }
