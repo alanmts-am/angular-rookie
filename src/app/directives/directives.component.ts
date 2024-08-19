@@ -10,12 +10,18 @@ export class DirectivesComponent {
   pessoas!: string[];
   isCursosListados = false;
 
+  input = true
+
   constructor(private directivesService: DirectivesService) {
     this.pessoas = this.directivesService.getCursos();
   }
 
   trocar() {
     this.isCursosListados = !this.isCursosListados;
+  }
+
+  mudarInput() {
+    this.input = !this.input
   }
 
 }

@@ -15,3 +15,10 @@
     A lista dos cursos está vazia. Esse texto apareceu por isso
   </p>
 </article>
+
+<article class="ng-switch">
+  <h2>NgSwitch</h2>
+  <button mat-flat-button (click)="mudarInput()">Trocar valor</button>
+  <input type="text" value="Desabilita quando verdade" [disabled]="input" />
+  <input type="text" value="Desabilita quando false" [disabled]="!input" />
+</article>
