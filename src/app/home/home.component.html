@@ -1,18 +1,19 @@
-<h1>Hello World</h1>
+<section [ngSwitch]="nav">
+  <h1 *ngSwitchCase="'home'">Hello World</h1>
+  <section class="data-binding" *ngSwitchCase="'data'">
+    <h1>Passagem de dados</h1>
+    <app-data-binding></app-data-binding>
+  </section>
 
-<section class="data-binding">
-  <h1>Passagem de dados</h1>
-  <app-data-binding></app-data-binding>
-</section>
+  <section class="directives" *ngSwitchCase="'directives'">
+    <h1>Diretivas</h1>
+    <app-directives></app-directives>
+  </section>
 
-<section class="directives">
-  <h1>Diretivas</h1>
-  <app-directives></app-directives>
-</section>
-
-<section class="io-properties">
-  <h1>Passagem e recebimento de dados entre componentes</h1>
-  <app-io-properties [nome]="nomeIo" (mudouValor)="onMudouValor($event)">
-  </app-io-properties>
-  <p>Valor recebido do filho: {{ valorRecebido }}</p>
+  <section class="io-properties" *ngSwitchCase="'io'">
+    <h1>Passagem e recebimento de dados entre componentes</h1>
+    <app-io-properties [nome]="nomeIo" (mudouValor)="onMudouValor($event)">
+    </app-io-properties>
+    <p>Valor recebido do filho: {{ valorRecebido }}</p>
+  </section>
 </section>
