@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class DirectivesService {
 
-  constructor() { }
-
   getCursos(): string[] {
     return ['Alan', 'Mikaella', 'Keeteleen']
   }
