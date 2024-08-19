@@ -7,3 +7,11 @@
     <li *ngFor="let pessoa of pessoas">{{ pessoa }}</li>
   </ul>
 </article>
+
+<article class="ng-if">
+  <h2>NgIf</h2>
+  <button mat-flat-button (click)="trocar()">Trocar valor</button>
+  <p *ngIf="isCursosListados">
+    A lista dos cursos está vazia. Esse texto apareceu por isso
+  </p>
+</article>

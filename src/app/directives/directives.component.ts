@@ -8,9 +8,14 @@ import { DirectivesService } from './directives.service';
 })
 export class DirectivesComponent {
   pessoas!: string[];
+  isCursosListados = false;
 
   constructor(private directivesService: DirectivesService) {
     this.pessoas = this.directivesService.getCursos();
+  }
+
+  trocar() {
+    this.isCursosListados = !this.isCursosListados;
   }
 
 }
