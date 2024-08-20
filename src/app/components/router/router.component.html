@@ -1,0 +1,8 @@
+<app-header></app-header>
+<h3>Informe um valor</h3>
+
+<input #idInput placeholder="Digite algo" (input)="(0)" />
+
+<button mat-flat-button [routerLink]="['/router', idInput.value.trim()]">
+  Pegar valor
+</button>

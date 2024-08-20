@@ -16,6 +16,8 @@ import { registerLocaleData } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterComponent } from './components/router/router.component';
+import { RouterDetailComponent } from './components/router-detail/router-detail.component';
 
 registerLocaleData(localePt);
 
@@ -29,6 +31,8 @@ registerLocaleData(localePt);
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    RouterComponent,
+    RouterDetailComponent,
   ],
   imports: [
     BrowserModule,
