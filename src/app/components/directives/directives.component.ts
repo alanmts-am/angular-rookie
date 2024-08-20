@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DirectivesService } from './directives.service';
+import { DirectivesService } from '../../services/directives.service';
 
 @Component({
   selector: 'app-directives',

@@ -6,16 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
-import { IoPropertiesComponent } from './io-properties/io-properties.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
+import { IoPropertiesComponent } from './components/io-properties/io-properties.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { FundoAzulDirective } from './shared/fundo-azul.directive';
 
 @NgModule({
   declarations: [
     HomeComponent,
     IoPropertiesComponent,
     DirectivesComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    FundoAzulDirective
   ],
   imports: [
     BrowserModule,
