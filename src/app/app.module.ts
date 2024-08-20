@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,11 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { FundoAzulDirective } from './shared/fundo-azul.directive';
 import { PipesComponent } from './components/pipes/pipes.component';
+
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { PipesComponent } from './components/pipes/pipes.component';
     MatButtonModule
   ],
   providers: [
-    provideAnimationsAsync('noop')
+    provideAnimationsAsync('noop'),
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
   ],
   bootstrap: [HomeComponent]
 })
