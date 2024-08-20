@@ -3,6 +3,9 @@
 
 <input #idInput placeholder="Digite algo" (input)="(0)" />
 
-<button mat-flat-button [routerLink]="['/router', idInput.value.trim()]">
+<button
+  mat-flat-button
+  [routerLink]="['/router', idInput.value.replace(' ', '')]"
+>
   Pegar valor
 </button>
