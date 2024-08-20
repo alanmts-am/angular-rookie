@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { IoPropertiesComponent } from './components/io-properties/io-properties.component';
@@ -14,17 +13,20 @@ import { PipesComponent } from './components/pipes/pipes.component';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
-    HomeComponent,
     IoPropertiesComponent,
     DirectivesComponent,
     DataBindingComponent,
     FundoAzulDirective,
-    PipesComponent
+    PipesComponent,
+    AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,6 @@ registerLocaleData(localePt);
       useValue: 'pt-BR'
     }
   ],
-  bootstrap: [HomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
