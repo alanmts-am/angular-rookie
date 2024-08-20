@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  background-color: rgb(99, 99, 255);
+  height: 100px;
+  align-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+}
+
+nav li {
+  color: aliceblue;
+  font-size: 30px;
+  list-style: none;
+  padding: 0px 50px;
+}
+
+nav li:hover {
+  color: rgb(29, 29, 248);
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
