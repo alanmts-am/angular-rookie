@@ -10,6 +10,7 @@ import { IoPropertiesComponent } from './components/io-properties/io-properties.
 import { DirectivesComponent } from './components/directives/directives.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { FundoAzulDirective } from './shared/fundo-azul.directive';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FundoAzulDirective } from './shared/fundo-azul.directive';
     IoPropertiesComponent,
     DirectivesComponent,
     DataBindingComponent,
-    FundoAzulDirective
+    FundoAzulDirective,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
