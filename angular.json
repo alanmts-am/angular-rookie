@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-hookie": {
+    "angular-rookie": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-hookie",
+            "outputPath": "dist/angular-rookie",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-hookie:build:production"
+              "buildTarget": "angular-rookie:build:production"
             },
             "development": {
-              "buildTarget": "angular-hookie:build:development"
+              "buildTarget": "angular-rookie:build:development"
             }
           },
           "defaultConfiguration": "development"
